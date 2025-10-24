@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1761311341578,
+  "lastUpdate": 1761321416328,
   "repoUrl": "https://github.com/czlonkowski/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "bd8a7f68ace3e16e943755f530e19b7261aff967",
-          "message": "Merge pull request #266 from czlonkowski/feat/integration-tests-phase-7\n\nfeat: Phase 7 Integration Tests - Execution Management",
-          "timestamp": "2025-10-05T10:21:12+02:00",
-          "tree_id": "ff8783685ed44e297823eedc8cb914ee1c2be6de",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/bd8a7f68ace3e16e943755f530e19b7261aff967"
-        },
-        "date": 1759652574146,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0193,
-            "range": "0.2708",
-            "unit": "ms",
-            "extra": "51869 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.2174,
-            "range": "0.7845999999999997",
-            "unit": "ms",
-            "extra": "311 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0046,
-            "range": "0.2866",
-            "unit": "ms",
-            "extra": "216269 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0674,
-            "range": "0.32730000000000004",
-            "unit": "ms",
-            "extra": "14833 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1815,6 +1763,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/czlonkowski/n8n-mcp/commit/b18f6ec7a425aa60a4dd35957c69a29bb338a641"
         },
         "date": 1761311340815,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9a3520adb7017529ee23d8873d86daea3d6f2957",
+          "message": "Merge pull request #366 from czlonkowski/enhance/http-validation-suggestions-361\n\nenhance: Add HTTP Request node validation suggestions (issue #361)",
+          "timestamp": "2025-10-24T17:55:05+02:00",
+          "tree_id": "44ac2ef34ba56ff420ca332566f11033202a8e0d",
+          "url": "https://github.com/czlonkowski/n8n-mcp/commit/9a3520adb7017529ee23d8873d86daea3d6f2957"
+        },
+        "date": 1761321416009,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
