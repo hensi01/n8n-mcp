@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1762205388126,
+  "lastUpdate": 1762252526639,
   "repoUrl": "https://github.com/czlonkowski/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "943f5862a3d022e3ff7b97a7a0368ee46e7a02e8",
-          "message": "Merge pull request #284 from czlonkowski/fix/resourcelocator-validation\n\nfix: Add resourceLocator validation for AI model nodes",
-          "timestamp": "2025-10-07T18:22:39+02:00",
-          "tree_id": "50a578b4a0bf082d0d524295309bded387c48b6e",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/943f5862a3d022e3ff7b97a7a0368ee46e7a02e8"
-        },
-        "date": 1759854275323,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0192,
-            "range": "0.364",
-            "unit": "ms",
-            "extra": "52187 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.3925,
-            "range": "0.6648999999999998",
-            "unit": "ms",
-            "extra": "295 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0048,
-            "range": "0.26030000000000003",
-            "unit": "ms",
-            "extra": "206451 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0697,
-            "range": "0.314",
-            "unit": "ms",
-            "extra": "14339 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1605,6 +1553,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/czlonkowski/n8n-mcp/commit/af6efe9e888b1723855544dd7b7bbf0e03ef8d59"
         },
         "date": 1762205387424,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "65f51ad8b5f3f95fa752ea0eb597c903eb99e27f",
+          "message": "chore: bump version to 2.22.9 (#395)\n\n* chore: bump version to 2.22.9\n\nUpdated version number to trigger release workflow after n8n 1.118.1 update.\nPrevious version 2.22.8 was already released on 2025-10-28, so the release\nworkflow did not trigger when PR #393 was merged.\n\nChanges:\n- Bump package.json version from 2.22.8 to 2.22.9\n- Update CHANGELOG.md with correct version and date\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n\n* docs: update n8n update workflow with lessons learned\n\nAdded new fast workflow section based on 2025-11-04 update experience:\n- CRITICAL: Check existing releases first to avoid version conflicts\n- Skip local tests - CI runs them anyway (saves 2-3 min)\n- Integration test failures with 'unauthorized' are infrastructure issues\n- Release workflow only triggers on version CHANGE\n- Updated time estimates for fast vs full workflow\n\nThis will make future n8n updates smoother and faster.\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n\n* fix: exclude versionCounter from workflow updates for n8n 1.118.1\n\nn8n 1.118.1 returns versionCounter in GET /workflows/{id} responses but\nrejects it in PUT /workflows/{id} updates with the error:\n'request/body must NOT have additional properties'\n\nThis was causing all integration tests to fail in CI with n8n 1.118.1.\n\nChanges:\n- Added versionCounter to excluded properties in cleanWorkflowForUpdate()\n- Tested and verified fix works with n8n 1.118.1 test instance\n\nFixes CI failures in PR #395\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n\n* chore: improve versionCounter fix with types and tests\n\n- Add versionCounter type definition to Workflow and WorkflowExport interfaces\n- Add comprehensive test coverage for versionCounter exclusion\n- Update CHANGELOG with detailed bug fix documentation\n\nAddresses code review feedback from PR #395\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n---------\n\nCo-authored-by: Claude <noreply@anthropic.com>",
+          "timestamp": "2025-11-04T11:33:54+01:00",
+          "tree_id": "b970df13ad4ec3c77e756ff21b994b94a8af6b1d",
+          "url": "https://github.com/czlonkowski/n8n-mcp/commit/65f51ad8b5f3f95fa752ea0eb597c903eb99e27f"
+        },
+        "date": 1762252526334,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
