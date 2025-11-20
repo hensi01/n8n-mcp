@@ -391,8 +391,8 @@ describe('n8n-validation', () => {
         } as any;
 
         const cleaned = cleanWorkflowForUpdate(workflow);
-        // n8n API requires settings to be present, so we provide minimal defaults
-        expect(cleaned.settings).toEqual({ executionOrder: 'v0' });
+        // n8n API requires settings to be present, so we provide minimal defaults (v1 is modern default)
+        expect(cleaned.settings).toEqual({ executionOrder: 'v1' });
       });
 
       it('should filter settings to safe properties to prevent API errors (Issue #248 - final fix)', () => {
@@ -484,8 +484,8 @@ describe('n8n-validation', () => {
         } as any;
 
         const cleaned = cleanWorkflowForUpdate(workflow);
-        // n8n API requires settings, so we provide minimal defaults
-        expect(cleaned.settings).toEqual({ executionOrder: 'v0' });
+        // n8n API requires settings, so we provide minimal defaults (v1 is modern default)
+        expect(cleaned.settings).toEqual({ executionOrder: 'v1' });
       });
 
       it('should provide minimal settings when only non-whitelisted properties exist (Issue #431)', () => {
@@ -502,9 +502,9 @@ describe('n8n-validation', () => {
 
         const cleaned = cleanWorkflowForUpdate(workflow);
         // All properties were filtered out, but n8n API requires settings
-        // so we provide minimal defaults to avoid both "additional properties"
-        // and "required property" API errors
-        expect(cleaned.settings).toEqual({ executionOrder: 'v0' });
+        // so we provide minimal defaults (v1 is modern default) to avoid both
+        // "additional properties" and "required property" API errors
+        expect(cleaned.settings).toEqual({ executionOrder: 'v1' });
       });
 
       it('should preserve whitelisted settings when mixed with non-whitelisted (Issue #431)', () => {
@@ -1406,8 +1406,8 @@ describe('n8n-validation', () => {
       expect(forUpdate).not.toHaveProperty('active');
       expect(forUpdate).not.toHaveProperty('tags');
       expect(forUpdate).not.toHaveProperty('meta');
-      // n8n API requires settings in updates, so minimal defaults are provided (Issue #431)
-      expect(forUpdate.settings).toEqual({ executionOrder: 'v0' });
+      // n8n API requires settings in updates, so minimal defaults (v1) are provided (Issue #431)
+      expect(forUpdate.settings).toEqual({ executionOrder: 'v1' });
       expect(validateWorkflowStructure(forUpdate)).toEqual([]);
     });
   });

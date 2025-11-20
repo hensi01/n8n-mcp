@@ -198,13 +198,13 @@ export function cleanWorkflowForUpdate(workflow: Workflow): Partial<Workflow> {
     if (Object.keys(filteredSettings).length > 0) {
       cleanedWorkflow.settings = filteredSettings;
     } else {
-      // Provide minimal valid settings (executionOrder is always accepted)
-      cleanedWorkflow.settings = { executionOrder: 'v0' as const };
+      // Provide minimal valid settings (executionOrder v1 is the modern default)
+      cleanedWorkflow.settings = { executionOrder: 'v1' as const };
     }
   } else {
     // No settings provided - include minimal default settings
-    // n8n API requires settings in workflow updates
-    cleanedWorkflow.settings = { executionOrder: 'v0' as const };
+    // n8n API requires settings in workflow updates (v1 is the modern default)
+    cleanedWorkflow.settings = { executionOrder: 'v1' as const };
   }
 
   return cleanedWorkflow;
