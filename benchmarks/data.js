@@ -1,39 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1764102789084,
+  "lastUpdate": 1764115140667,
   "repoUrl": "https://github.com/czlonkowski/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "8d20c64f5c657700ec8ec82562af36f23de09112",
-          "message": "Revert to v2.18.10 - Remove session persistence (v2.19.0-v2.19.5) (#322)\n\nAfter 5 consecutive hotfix attempts, session persistence has proven\narchitecturally incompatible with the MCP SDK. Rolling back to last\nknown stable version.\n\n## Removed\n- 16 new files (session types, docs, tests, planning docs)\n- 1,100+ lines of session persistence code\n- Session restoration hooks and lifecycle events\n- Retry policy and warm-start implementations\n\n## Restored\n- Stable v2.18.10 codebase\n- Library export fields (from PR #310)\n- All core MCP functionality\n\n## Breaking Changes\n- Session persistence APIs removed\n- onSessionNotFound hook removed\n- Session lifecycle events removed\n\nThis reverts commits fe13091 through 1d34ad8.\nRestores commit 4566253 (v2.18.10, PR #310).\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-authored-by: Claude <noreply@anthropic.com>",
-          "timestamp": "2025-10-14T10:13:43+02:00",
-          "tree_id": "1a3dae74ae5010ff5e212b1f629bacc30466b6f7",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/8d20c64f5c657700ec8ec82562af36f23de09112"
-        },
-        "date": 1760429730232,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0136,
-            "range": "0.3096",
-            "unit": "ms",
-            "extra": "73341 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1542,6 +1511,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/czlonkowski/n8n-mcp/commit/1be06c217f088d6d9a7e273c773fe8ab1e8de7dc"
         },
         "date": 1764102788423,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "25784142fe12ebaebde961f3488577311755cd05",
+          "message": "fix: address tools documentation gaps and outdated references (v2.26.3) (#443)",
+          "timestamp": "2025-11-26T00:57:15+01:00",
+          "tree_id": "adccab663f47aabed599b8585de91aa7a6e955eb",
+          "url": "https://github.com/czlonkowski/n8n-mcp/commit/25784142fe12ebaebde961f3488577311755cd05"
+        },
+        "date": 1764115140293,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
