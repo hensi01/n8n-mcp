@@ -1,0 +1,17 @@
+{
+    "mcpServers": {
+        "n8n-mcp": {
+            "command": "node",
+            "args": [
+                "C:/Users/hensi/Downloads/MARKET~1/PROGRA~1/n8n-mcp/dist/mcp/index.js"
+            ],
+            "env": {
+                "MCP_MODE": "stdio",
+                "LOG_LEVEL": "error",
+                "DISABLE_CONSOLE_OUTPUT": "true",
+                "N8N_API_URL": "https://n8n1.wahensi.com.br",
+                "N8N_API_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiNmQ1M2Q4OC0yMzUzLTQzZDUtODc2NC1mM2NhZWUzNjkxMTIiLCJpc3MiOiJuOG4iLCJhdWQiOiJtY3Atc2VydmVyLWFwaSIsImp0aSI6ImJjYTRiYjc4LWI3ZWUtNDFlMy1iMDZkLTA1NzZjNjFkOGU2MyIsImlhdCI6MTc2NjYwMTEwN30.dOUNllZDhKv7iSt4WJdDmYTsgyAfo9G1rgzWdM3DEpQ"
+            }
+        }
+    }
+}
